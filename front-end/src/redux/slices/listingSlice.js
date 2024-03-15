@@ -62,3 +62,5 @@ const listingSlice = createSlice({
   },
 });
 
+
+export default listingSlice.reducer;
