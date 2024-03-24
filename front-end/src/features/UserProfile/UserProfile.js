@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import tom from './tom.jpeg'
-import Navbar from '../../components/Navbar';
+import { Navbar } from 'react-bootstrap';
 
 const UserProfile = () => {
   const [editMode, setEditMode] = useState(false);
