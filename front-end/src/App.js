@@ -1,24 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UserLogin from "./pages/UserLogin";
-import SignUp from "./pages/UserSignUp";
-import BlogEditor from "./pages/WriteBlogs";
-import BlogsPage from "./pages/BlogsPage";
+import ListingsPage from "./features/Listing/ListingsPage";
+import MainPage from "./components/MainPage";
+import AdminLogin from "./features/Auth/Admin/AdminLogin";
+import ContactForm from "./features/Contactus/Contactus";
+import BlogEditor from "./features/Blogs/WriteBlog";
+import BlogList from "./features/Blogs/Blog";
+import UserProfile from "./features/UserProfile/UserProfile";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<BlogsPage />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/" element={<BlogEditor />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/listings" element={<ListingsPage />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/writeblog" element={<BlogEditor />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="user-profile" element={<UserProfile/>} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-ReactDOM.render(<App />, document.getElementById("root"));
-ReactDOM.render(<App />, document.getElementById("root"));
